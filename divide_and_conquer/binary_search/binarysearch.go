@@ -22,8 +22,8 @@ func FindElemIndex(elem int, array []int) (index int, success bool) {
 	}
 
 	if array[averageIndex] < elem {
-		return findElemIndex(elem, array[averageIndex+1:])
+		return FindElemIndex(elem, array[averageIndex+1:])
 	} else {
-		return findElemIndex(elem, array[:averageIndex])
+		return FindElemIndex(elem, array[:averageIndex])
 	}
 }
